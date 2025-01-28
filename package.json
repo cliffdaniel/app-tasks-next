@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run prisma-generate && next build",
     "start": "next start",
     "lint": "next lint",
     "seed": "node --loader ts-node/esm prisma/seed.mts",
-    "test": "jest"
+    "test": "jest",
+    "prisma-generate": "prisma generate"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
